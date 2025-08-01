@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'pixel';
-    src: url(font/04B_30__.TTF);
+    src: url(organizar/font/04B_30__.TTF);
 }
 
 .inicio {
@@ -83,6 +83,16 @@
 }
 
 #lista-jogos{
+  background-color: rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+}
+
+#lista-videos{
+  background-color: rgba(0, 0, 0, 0.24);
+  border-radius: 10px;
+}
+
+#lista-perfis{
   background-color: rgba(0, 0, 0, 0.24);
   border-radius: 10px;
 }

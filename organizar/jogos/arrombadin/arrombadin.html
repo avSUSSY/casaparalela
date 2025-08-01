@@ -5,8 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quem é o arrombadin? 😨</title>
     <link rel="icon" href="imgarrombadin/iconearrombadin.png" type="image/x-icon">
+    <script src="script.js" defer></script>
+
+    <style>
+    body {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    #personagem {
+      position: relative;
+      width: 300px;
+      height: 400px;
+      margin: 30px auto;
+    }
+
+    .parte {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  </style>
+
 </head>
 <body>
     
+    <div id="personagem">
+        <img id="pele" class="parte" src="" alt="Pele">
+        <img id="rosto" class="parte" src="" alt="Rosto">
+        <img id="cabelo" class="parte" src="" alt="Cabelo">
+    </div>
+
+    <button onclick="sortearPartes()">Sortear Personagem</button>
+
+    
+
 </body>
 </html>
