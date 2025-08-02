@@ -3,11 +3,14 @@
     src: url(organizar/font/04B_30__.TTF);
 }
 
+
+
 .inicio {
   margin-top: 8px;
 }
 
 .top-bar {
+  user-select: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -39,6 +42,7 @@
   color: white;
   padding: 10px;
   z-index: 999;
+  
 }
 
 .perfil{
@@ -100,7 +104,7 @@
   border-radius: 10px;
 }
 
-button{
+.botaosidebar{
   padding: 10px 20px;
   text-transform: uppercase;
   border-radius: 8px;
@@ -114,5 +118,47 @@ button{
   border: 1px solid #00000080;
   transition: 0.5s ease;
   user-select: none;
+}
+
+
+body.dark-mode {
+  background-color: #09091a;
+  color: #ffffffcb;
+}
+
+body.dark-mode button {
+  background-color: #ffffff0e;
+  color: #ffffffcb;
+  border: 1px solid #ffffffcb;
+}
+
+body.dark-mode .conteudo-central {
+  background-color: #ffffff0e;
+  color: #ffffffcb;
+}
+
+body.dark-mode .caixa {
+  background-color: #ffffff0e;
+  color: #ffffffcb;
+}
+
+body.dark-mode .side-bar {
+  background-color: #ffffff0e;
+}
+
+body.dark-mode .top-bar {
+  background-color: #ffffff25;
+  color: rgba(124, 131, 192, 0.796);
+}
+
+body.dark-mode #lista-jogos,
+body.dark-mode #lista-videos,
+body.dark-mode #lista-perfis {
+  background-color: #ffffff0e;
+}
+
+body.dark-mode .botaosidebar {
+  border: 1px solid #ffffffcb;
+  color: #ffffffcb;
 }
 

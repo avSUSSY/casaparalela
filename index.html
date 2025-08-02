@@ -15,7 +15,9 @@
         <a href=""><img src="organizar/img/767_Sem_Titulo_20250423183620.png" width="150"></a>
         </div>
         <div class="bemvindo"><h1>BEM-VINDO</h1></div>
-    </div>
+        <div>
+            <button id="modoEscuroBtn">Ativar modo escuro</button>
+        </div>
     </div>
 
 
@@ -43,7 +45,7 @@
     <div class="side-bar">
         <div class="sites">
             <div class="sidebar">
-                <p class="menu-titulo" onclick="togglePerfis()"><button>Perfis</button></p>
+                <p class="menu-titulo" onclick="togglePerfis()"><button class="botaosidebar">Perfis</button></p>
                 <div id="lista-perfis" style="display: none;">
                     <a href="organizar/perfils/av/av.html"><img src="organizar/img/avtuber.png" width="125"></a><br>
                     <a href="organizar/perfils/kaua/kaua.html">- Kauã</a><br>
@@ -53,13 +55,13 @@
                     
                 </div>
 
-                <p class="menu-titulo" onclick="toggleVideos()"><button>Canais no YT</button></p>
+                <p class="menu-titulo" onclick="toggleVideos()"><button class="botaosidebar">Canais no YT</button></p>
                 <div id="lista-videos" style="display: none;">
                     <a href="https://www.youtube.com/@AV_SUS"><img src="organizar/img/avtuber.png" width="125"></a><br>
                     <a href="https://www.youtube.com/@hey_sky912"><img src="organizar/img/skytuber.png" width="125"></a><br>
                 </div>
 
-                <p class="menu-titulo" onclick="toggleJogos()"><button>Jogos</button></p>
+                <p class="menu-titulo" onclick="toggleJogos()"><button class="botaosidebar">Jogos</button></p>
                 <div id="lista-jogos" style="display: none;">
                     <a href="organizar/jogos/arrombadin/arrombadin.html"><img src="organizar/jogos/arrombadin/imgarrombadin/qmeessearrombadin.png" width="125"> </a><br>
                 </div>
@@ -90,5 +92,16 @@ function toggleJogos() {
   const lista = document.getElementById("lista-jogos");
   lista.style.display = (lista.style.display === "none") ? "block" : "none";
 }
+
+    // BOTAO DARK-MODE
+
+
+  const botao = document.getElementById("modoEscuroBtn");
+
+  botao.addEventListener("click", () => {
+    // Isso adiciona ou remove a classe 'dark-mode' no body
+    document.body.classList.toggle("dark-mode");
+  });
+
 </script>
 </html>
