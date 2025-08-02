@@ -45,6 +45,9 @@
   margin-left: 10px;
 }
 
+.sidebar {
+  text-align: center;
+}
 
 .sidebar a {
   color: blue;
@@ -96,3 +99,20 @@
   background-color: rgba(0, 0, 0, 0.24);
   border-radius: 10px;
 }
+
+button{
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #00000080;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #00000080;
+  transition: 0.5s ease;
+  user-select: none;
+}
+
