@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kauã</title>
+<link rel="stylesheet" href="kaua.css">
+</head>
+<body>
+
+<div id="comeco">
+  <div id="texto">
+    <h1>CLIQUE NO BOTÃO</h1>
+  </div>
+
+  <img id="botao" src="aniversario/frame2.png" alt="Botão">
+  <div id="confetes"></div>
+
+  <!-- música de aniversário -->
+  <audio id="musica" src="aniversario/confetti-pop-sound-effect.mp3" loop></audio>
+</div>
+
+<script>
+const botao = document.getElementById("botao");
+const confetesContainer = document.getElementById("confetes");
+const musica = document.getElementById("musica");
+
+botao.addEventListener("click", () => {
+  // tocar música
+  musica.play();
+
+  // troca imagem do botão
+  botao.src = "aniversario/frame1.png";
+  botao.classList.add("clicado");
+
+  // criar confetes saindo do botão
+  const rect = botao.getBoundingClientRect();
+  const centroX = rect.left + rect.width / 2;
+  const centroY = rect.top + rect.height / 2;
+
+  for (let i = 0; i < 20; i++) {
+    const confete = document.createElement("img");
+    confete.src = "aniversario/confete.png";
+    confete.classList.add("confete");
+    confete.style.left = centroX - 15 + "px";
+    confete.style.top = centroY - 15 + "px";
+
+    const x = (Math.random() - 0.5) * 200 + "px";
+    const y = (Math.random() - 0.5) * 200 + "px";
+    confete.style.setProperty("--x", x);
+    confete.style.setProperty("--y", y);
+
+    confetesContainer.appendChild(confete);
+    setTimeout(() => confete.remove(), 1500);
+  }
+
+  // trocar o conteúdo da página após a animação
+  setTimeout(() => {
+    document.body.innerHTML = `
+      <div id="aniversario">
+        
+        <h1>Feliz aniversario Kauã </h1>
+
+        <div class="caixa">
+        <h3>Todo o amor que eu sinto por você é gigantesco, nada se compara. Eu não sou muito boa com cartas de amor, mas tive uma ideia, criar este site como a minha forma de demonstrar o quanto eu te amo. Não consigo te ver pessoalmente agora, mas quero te fazer o presente mais marcante que puder.</h3>
+        <h3>E você é a pessoa mais importante da minha vida moh. Eu te quero para sempre bb, e só de imaginar que está tão perto de a gente ficar juntos e você fazendo 20 anos hoje, fico emocionada por ti. É lindo ver você crescendo, se tornando mais independente e maduro, mas mantendo esse coração bondoso e carinhoso.</h3>
+        <h4>E eu espero que você ama o presente, mesmo que não seja perfeito, por falta de tempo. Ele vem cheio de amor, de mim para você.</h4>
+        </div>
+
+        <p><span class="emoji">C</span><span class="uwu">Feito por: Amor da sua vida</span> <span class="emoji">C</span><p>
+
+        <img src="aniversario/uwu.png" width="300">
+
+        
+        <audio id="musica" src="aniversario/hb128.mp3" autoplay loop onplay="this.volume=0.5"></audio>
+
+        <video autoplay loop muted playsinline style="position:fixed; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1;">
+        <source src="aniversario/vidio.mp4" type="video/mp4">
+        </video>
+
+      </div>
+    `;
+  }, 1500);
+});
+</script>
+
+</body>
+</html>
