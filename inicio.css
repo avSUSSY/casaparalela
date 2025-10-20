@@ -34,9 +34,23 @@
   font-size: 10px;
 }
 
+.conteudo-central {
+  margin-top: 80px;         /* espaço pra top-bar */
+  margin-left: 20%;       /* deixa espaço pra sidebar no PC */
+  margin-right: 20%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.253);
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  max-width: 1000px;
+  overflow-x: hidden;
+}
+
+/* ======== SIDEBAR ======== */
 .side-bar {
   position: fixed;
-  top: 40px; /* abaixo da top-bar */
+  top: 40px;
   left: 0;
   width: 140px;
   height: calc(100% - 60px);
@@ -44,7 +58,37 @@
   color: white;
   padding: 10px;
   z-index: 999;
-  
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden; /* bloqueia o scroll lateral */
+  }
+
+  .side-bar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .conteudo-central {
+    margin-left: 0;
+    margin-top: 80px;
+    padding: 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .caixa {
+    font-size: 12px;
+  }
 }
 
 .perfil{
@@ -66,17 +110,6 @@
   margin-top: 10px;
 }
 
-.conteudo-central {
-  margin-left: 180px;       /* espaço pra compensar a sidebar */
-  margin-top: 80px;         /* espaço pra compensar a top-bar */
-  padding: 20px;
-  background-color: rgba(0, 0, 0, 0.253);
-  border-radius: 8px;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  max-width: 0 auto;
-
-}
 
 .caixa {
   background-color: rgba(0, 0, 0, 0.363);
@@ -86,14 +119,9 @@
   box-shadow: 0 0 8px #00000022;
   font-family: Arial, sans-serif;
   margin: 0 auto;
-  font-size: 12px;
-
+  font-size: 8px;
 }
 
-.caixa h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
 
 #lista-jogos{
   background-color: rgba(0, 0, 0, 0.24);
